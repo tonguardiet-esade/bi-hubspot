@@ -9,7 +9,8 @@ import {
   ArrowUpRight,
   ChevronRight,
   Globe,
-  PieChart
+  PieChart,
+  Database
 } from 'lucide-react';
 
 export default function DashboardHome() {
