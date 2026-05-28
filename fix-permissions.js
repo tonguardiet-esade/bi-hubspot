@@ -24,7 +24,10 @@ function chmodRecursive(dirPath) {
   }
 }
 
-console.log("Fixing permissions recursively for 'src' and 'prisma'...");
+console.log("Fixing permissions recursively for 'src', 'prisma', '.next'...");
 chmodRecursive(path.resolve(__dirname, 'src'));
 chmodRecursive(path.resolve(__dirname, 'prisma'));
+if (fs.existsSync(path.resolve(__dirname, '.next'))) {
+  chmodRecursive(path.resolve(__dirname, '.next'));
+}
 console.log("Permissions fixed successfully!");

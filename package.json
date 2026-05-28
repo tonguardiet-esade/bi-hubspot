@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node fix-permissions.js && prisma generate && next build",
+    "build": "node fix-permissions.js && prisma generate && next build && node fix-permissions.js",
     "start": "next start",
     "lint": "eslint"
   },
