@@ -68,10 +68,10 @@ export async function POST(request: Request) {
     });
 
     return response;
-  } catch (error) {
+  } catch (error: any) {
     console.error('Login error:', error);
     return NextResponse.json(
-      { message: 'Error interno del servidor' },
+      { message: `Error interno del servidor: ${error.message || String(error)}` },
       { status: 500 }
     );
   }
